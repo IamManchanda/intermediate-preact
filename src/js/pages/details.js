@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { navigate } from '@reach/router';
+import React, { Component } from 'preact-compat';
+import { route } from 'preact-router';
 import petfinder from '../utils/petfinder';
 import PetImages from '../components/pet-images';
 import AdoptPetModal from '../components/adopt-pet-modal';
@@ -28,7 +28,7 @@ export default class Details extends Component {
         this.setState({ name, animal, location, description, media, breed, loading });
       })
       .catch(() => {
-        navigate('/');
+        route('/');
       });
   }
 
@@ -45,7 +45,7 @@ export default class Details extends Component {
         { loading ? (
           <h2 className="loading">Loading the data...</h2>
         ) : (
-          <React.Fragment>
+          <div>
             <div>
               <h1>{ name }</h1>
               <h2>{ `${animal} -- ${breed} -- ${location}` }</h2>
@@ -59,7 +59,7 @@ export default class Details extends Component {
               /> : null }
             </div>
             <PetImages media={ media } />
-          </React.Fragment>
+          </div>
         ) }
       </div>
     );

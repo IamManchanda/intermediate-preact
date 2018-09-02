@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from '@reach/router';
+import React from 'preact-compat';
+import { Link } from 'preact-router';
 
 export default ({ name, animal, breed, media, location, id }) => {
   let photos = [];
@@ -9,7 +9,7 @@ export default ({ name, animal, breed, media, location, id }) => {
   const hero = photos[0] ? photos[0].value : 'http://via.placeholder.com/300x300';
 
   return (
-    <Link to={ `/details/${id}` } className="pet">
+    <Link href={ `/details/${id}` } className="pet">
       <div className="image-container">
         <img src={ hero } alt={ name } />
       </div>

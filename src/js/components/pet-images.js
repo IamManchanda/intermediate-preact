@@ -3,7 +3,7 @@
 /* eslint-disable jsx-a11y/interactive-supports-focus */
 /* eslint-disable jsx-a11y/no-noninteractive-element-to-interactive-role */
 
-import React, { Component } from 'react';
+import React, { Component } from 'preact-compat';
 
 export default class PetImages extends Component {
   state = {

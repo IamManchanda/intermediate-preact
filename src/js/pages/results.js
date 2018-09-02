@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'preact-compat';
 import Pet from '../components/pet';
 import petfinder from '../utils/petfinder';
 import SearchBox from '../components/search-box';
@@ -33,7 +33,7 @@ class Results extends Component {
   render() {
     const { pets } = this.state;
     return (
-      <React.Fragment>
+      <div>
         <div className="search-route">
           <SearchBox search={ this.search } />
         </div>
@@ -56,7 +56,7 @@ class Results extends Component {
             );
           }) }
         </div>
-      </React.Fragment>
+      </div>
     );
   }
 }

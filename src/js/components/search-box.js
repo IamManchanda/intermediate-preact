@@ -1,7 +1,7 @@
 /* Fix these A11y issue soon */
 /* eslint-disable jsx-a11y/label-has-associated-control */ 
 
-import React from 'react';
+import React from 'preact-compat';
 import { ANIMALS } from 'petfinder-client';
 import { Consumer as SearchContextConsumer } from '../store/search-context';
 

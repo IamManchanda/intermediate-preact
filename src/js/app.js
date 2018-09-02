@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Router } from '@reach/router';
+import React, { Component } from 'preact-compat';
+import { Router } from 'preact-router';
 import { Provider as SearchContextProvider } from './store/search-context';
 import petfinder from './utils/petfinder';
 import Navbar from './components/navbar';
@@ -53,7 +53,7 @@ export default class App extends Component {
   
   render() {
     return (
-      <React.Fragment>
+      <div>
         <Navbar />
         <SearchContextProvider value={ this.state }>
           <Router>
@@ -62,7 +62,7 @@ export default class App extends Component {
             <Search path="/search" />
           </Router>
         </SearchContextProvider>
-      </React.Fragment>
+      </div>
     );
   }
 }

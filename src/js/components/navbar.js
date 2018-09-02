@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from '@reach/router';
-import styled, { keyframes } from 'react-emotion';
+import React from 'preact-compat';
+import { Link } from 'preact-router';
+import styled, { keyframes } from 'preact-emotion';
 import colors from './styled/color';
 
 const Spin = keyframes`
@@ -31,10 +31,10 @@ const LinkWithStyled = styled(Link)`
 
 export default () => (
   <HeaderWithStyled>
-    <LinkWithStyled to="/">
+    <LinkWithStyled href="/">
       Adopt Pets!
     </LinkWithStyled>
-    <LinkWithStyled to="/search" className="search-link">
+    <LinkWithStyled href="/search" className="search-link">
       {/* eslint-disable jsx-a11y/accessible-emoji */}
       <SpanWithStyled aria-label="search" role="img">
         🔍

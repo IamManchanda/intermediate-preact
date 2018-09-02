@@ -1,7 +1,6 @@
-import React from 'react';
-import { hydrate } from 'react-dom';
+import React, { render } from 'preact-compat';
 import App from './app';
 
 /* Grab App Root & Hydrate it into the `App` */
 const appRoot = document.getElementById('app');
-hydrate(<App />, appRoot);
+render(<App />, appRoot);

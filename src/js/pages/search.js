@@ -1,10 +1,10 @@
-import React from 'react';
-import { navigate } from '@reach/router';
+import React from 'preact-compat';
+import { route } from 'preact-router';
 import SearchBox from '../components/search-box';
 
 export default () => {
   const handleSearchSubmit = () => {
-    navigate('/');
+    route('/');
   };
   
   return (
